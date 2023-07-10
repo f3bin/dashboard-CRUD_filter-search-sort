@@ -1,0 +1,56 @@
+
+.UserList {
+     font-size: large;
+     h2 {
+          margin-bottom: 20px;
+     }
+
+     p {
+          font-weight: bold;
+     }
+
+     .search-sort-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin-bottom: 10px;
+
+          input[type="text"] {
+               padding: 5px;
+               width: 290px;
+               margin-right: 10px;
+               outline: #6C63AC;
+
+              &:focus{
+               outline: #6C63AC;
+              }
+          }
+
+          select {
+               padding: 5px;
+          }
+     }
+
+     table {
+          width: 100%;
+          border: 1px solid #f9f9f9;
+          border-collapse: collapse;
+          margin-bottom: 20px;
+
+          th {
+               background-color: #f2f2f2;
+               padding: 10px;
+               text-align: center;
+          }
+
+          tr {
+               &:nth-child(even) {
+                    background-color: #f9f9f9;
+               }
+
+               td {
+                    padding: 10px;
+               }
+          }
+     }
+}

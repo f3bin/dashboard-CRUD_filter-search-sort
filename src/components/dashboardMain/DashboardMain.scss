@@ -1,0 +1,28 @@
+.dashboardMain-container{
+     display: flex;
+
+
+     .dashboard-options{
+          width: 15%;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 50px;
+          background-color: white;
+          padding: 20px;
+
+          h3{
+               color: rgb(22, 170, 238);
+             display: flex;
+             gap: 5px;
+          }
+         
+     }
+
+     .dashboard-content{
+          width: 85%;
+          background-color: rgb(182, 182, 226);
+          padding: 10px;
+     }
+}

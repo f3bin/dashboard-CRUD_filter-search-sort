@@ -1,0 +1,29 @@
+{
+     "users":[
+          {
+               "id":1,
+               "name":"Terry",
+               "birthDate":"2000-12-25"
+          },
+          {
+               "id":2,
+               "name":"Smith",
+               "birthDate":"2007-02-20"
+          },
+          {
+               "id":3,
+               "name":"Chrome",
+               "birthDate":"2003-11-05"
+          },
+          {
+               "id":4,
+               "name":"Oleta",
+               "birthDate":"2005-07-09"
+          },
+          {
+               "id":5,
+               "name":"Albert",
+               "birthDate":"2009-09-21"
+          }
+     ]
+}
