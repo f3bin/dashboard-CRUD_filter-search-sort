@@ -1,8 +1,9 @@
-.dashboardMain-container{
+.dashboardMain-container {
      display: flex;
 
 
-     .dashboard-options{
+     .dashboard-options {
+
           width: 15%;
           height: 100vh;
           display: flex;
@@ -10,19 +11,46 @@
           align-items: flex-start;
           gap: 50px;
           background-color: white;
-          padding: 20px;
+          padding: 80px 20px 20px;
 
-          h3{
-               color: rgb(22, 170, 238);
-             display: flex;
-             gap: 5px;
+          h3 {
+               color: #6C63AC;
+               display: flex;
+               gap: 5px;
+
+               &:hover {
+                    color: #4634ce;
+               }
           }
-         
+          
+
      }
 
-     .dashboard-content{
+     .dashboard-content {
           width: 85%;
           background-color: rgb(182, 182, 226);
-          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .logout {
+
+               display: flex;
+               justify-content: flex-end;
+
+               .logout-button {
+                    padding: 10px;
+                    background-color: #f2f2f2;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+
+                    &:hover {
+                         background-color: #e0e0e0;
+                    }
+               }
+
+          }
+          
      }
 }
