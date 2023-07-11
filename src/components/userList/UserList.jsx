@@ -53,7 +53,10 @@ const UserList = () => {
     setNewUser((prev) => ({ ...prev, birthDate: e.target.value }));
   };
 
-  console.log(newUser);
+  const handleAddNewUser = () => {
+    dispatch(addUser(newUser));
+    setNewUser({ name: "", birthDate: "" });
+  };
 
   useEffect(() => {
     dispatch(getUsers());
@@ -74,8 +77,8 @@ const UserList = () => {
           />
           <select value={sortOption} onChange={handleSort}>
             <option value="">Sort By</option>
-            <option value="asc">Ascending</option>
-            <option value="desc">Descending</option>
+            <option value="asc">Ascending (DOB)</option>
+            <option value="desc">Descending (DOB)</option>
           </select>
         </div>
         <div className="searchSort-2">
@@ -83,12 +86,22 @@ const UserList = () => {
             <label>Name</label>
             <input
               type="text"
+              value={newUser.name}
+              required
               placeholder="enter name"
               onChange={handleNameChange}
             />
             <label>Dob</label>
-            <input type="date" onChange={handleDateChange} />
-            <button onClick={() => dispatch(addUser(newUser))}>
+            <input
+              required
+              type="date"
+              value={newUser.birthDate}
+              onChange={handleDateChange}
+            />
+            <button
+              onClick={handleAddNewUser}
+              disabled={!newUser.name || !newUser.birthDate}
+            >
               Add new User
             </button>
           </div>

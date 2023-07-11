@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/dashboard" element={<DashboardMain />}>
-          <Route path='' element={<h1 style={{color:'blue'}}>Dashboard</h1>} />
+          <Route index element={<UserList />} />
           <Route path="users" element={<UserList />} />
         </Route>
       </Routes>
