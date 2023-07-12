@@ -1,0 +1,30 @@
+.search-sort-container {
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     margin-bottom: 10px;
+
+     input[type="text"] {
+          padding: 10px;
+          width: 290px;
+          height: 30px;
+          margin-right: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          outline: none;
+
+          &:focus {
+               outline: none;
+               border-color: #6C63AC;
+               box-shadow: 0 0 0 2px #6C63AC40;
+          }
+     }
+
+     select {
+          padding: 2px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          outline: none;
+          height: 30px;
+     }
+}

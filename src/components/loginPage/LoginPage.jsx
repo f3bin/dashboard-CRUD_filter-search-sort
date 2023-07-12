@@ -18,7 +18,7 @@ const LoginPage = () => {
               <GoogleLogin
                 onSuccess={(credentialResponse) => {
                   var decoded = jwt_decode(credentialResponse.credential);
-                  console.log(decoded);
+                  console.log(decoded.name);
                   navigate("/dashboard");
                 }}
                 onError={() => {

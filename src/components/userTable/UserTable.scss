@@ -1,0 +1,38 @@
+table {
+     width: 100%;
+    margin: 0 auto;
+     border-bottom: 1px solid #f9f9f9;
+     border-collapse: collapse;
+     margin-bottom: 20px;
+     font-weight: 800;
+   }
+   
+   th {
+     background-color: #6C63AC;
+     padding: 10px;
+     text-align: center;
+     color: white;
+   }
+   
+   tr {
+     color: black;
+   
+     &:nth-child(even) {
+       background-color: #f9f9f9;
+       color: #6C63AC;
+   
+       .delete-button {
+         color: #6C63AC;
+       }
+     }
+   
+     td {
+       padding: 10px;
+   
+       .delete-button {
+         color: black;
+         cursor: pointer;
+       }
+     }
+   }
+   
