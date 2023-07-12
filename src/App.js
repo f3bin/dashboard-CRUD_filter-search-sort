@@ -1,11 +1,8 @@
-
 import './App.css';
 import LoginPage from './components/loginPage/LoginPage';
 import { Routes, Route } from 'react-router-dom';
 import DashboardMain from './components/dashboardMain/DashboardMain';
-import UserMain from './pages/UserMain';
-
-
+import UserMain from './pages/userMain/UserMain';
 
 function App() {
   return (

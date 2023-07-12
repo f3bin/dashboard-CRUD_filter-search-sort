@@ -16,21 +16,6 @@
       "birthDate": "2009-09-21"
     },
     {
-      "id": 9,
-      "name": "Michael",
-      "birthDate": "1995-06-25"
-    },
-    {
-      "id": 10,
-      "name": "Emily",
-      "birthDate": "2001-04-15"
-    },
-    {
-      "id": 11,
-      "name": "David",
-      "birthDate": "1999-09-02"
-    },
-    {
       "id": 12,
       "name": "Sophia",
       "birthDate": "2004-01-18"
@@ -39,11 +24,6 @@
       "id": 13,
       "name": "John",
       "birthDate": "2006-11-12"
-    },
-    {
-      "id": 15,
-      "name": "Liam",
-      "birthDate": "2010-07-17"
     },
     {
       "id": 16,
@@ -71,9 +51,9 @@
       "birthDate": "2000-10-01"
     },
     {
-      "id": 22,
-      "name": "Ava",
-      "birthDate": "2006-04-22"
+      "name": "Sabu",
+      "birthDate": "2022-04-07",
+      "id": 22
     }
   ]
 }

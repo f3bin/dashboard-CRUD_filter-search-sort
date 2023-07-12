@@ -5,7 +5,7 @@ import "./SearchSort.scss";
 
 const SearchSort = () => {
   const dispatch = useDispatch();
-  const { searchedValue } = useSelector((state) => state.search);
+  const { searchedValue,sortedValue } = useSelector((state) => state.search);
 
   return (
     <div className="search-sort-container">
@@ -16,7 +16,7 @@ const SearchSort = () => {
           onChange={(e) => dispatch(searchItem(e.target.value))}
         />
         <select
-          value={sortOption}
+         value={sortedValue}
           onChange={(e) => dispatch(sortOption(e.target.value))}
         >
           <option value="">Sort By</option>

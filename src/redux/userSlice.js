@@ -51,28 +51,14 @@ const userSlice = createSlice({
         state.users = [];
         state.error = action.error.message;
       })
-      .addCase(deleteUser.pending, (state) => {
-        state.loading = true;
-      })
       .addCase(deleteUser.fulfilled, (state, action) => {
-        state.loading = false;
         state.users = state.users.filter((item) => item.id !== action.payload);
       })
-      .addCase(deleteUser.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.error.message;
-      })
-      .addCase(addUser.pending, (state) => {
-        state.loading = true;
-      })
+    
       .addCase(addUser.fulfilled, (state, action) => {
-        state.loading = false;
         state.users.push(action.payload);
       })
-      .addCase(addUser.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.error.message;
-      });
+  ;
   },
 });
 

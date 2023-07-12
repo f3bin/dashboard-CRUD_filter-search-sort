@@ -1,8 +1,8 @@
 import React from "react";
-import SearchSort from "../components/searchSortsection/SearchSort";
+import SearchSort from "../../components/searchSortsection/SearchSort";
 import './UserMain.scss'
-import AddUser from "../components/addUser/AddUser";
-import UserTable from "../components/userTable/UserTable";
+import AddUser from "../../components/addUser/AddUser";
+import UserTable from "../../components/userTable/UserTable";
 
 const UserMain = () => {
   return (

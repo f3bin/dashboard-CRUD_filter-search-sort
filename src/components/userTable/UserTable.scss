@@ -13,7 +13,7 @@ table {
      text-align: center;
      color: white;
    }
-   
+    
    tr {
      color: black;
    
@@ -30,6 +30,7 @@ table {
        padding: 10px;
    
        .delete-button {
+        width: 40px;
          color: black;
          cursor: pointer;
        }
