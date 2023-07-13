@@ -16,6 +16,24 @@ export const deleteUser = createAsyncThunk(
   }
 );
 
+
+
+export const updateUser = createAsyncThunk(
+  "users/update",
+  async (user) => {
+    await fetch(`http://localhost:3031/users/${user.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    });
+
+    return user;  
+  }
+);
+
+
 export const addUser = createAsyncThunk("users/add", async (user) => {
   const response = await fetch("http://localhost:3031/users", {
     method: "POST",
@@ -54,6 +72,14 @@ const userSlice = createSlice({
       .addCase(deleteUser.fulfilled, (state, action) => {
         state.users = state.users.filter((item) => item.id !== action.payload);
       })
+
+      .addCase(updateUser.fulfilled, (state, action) => {
+        const updatedUser = action.payload;
+        const userIndex = state.users.findIndex((user) => user.id === updatedUser.id);
+        if (userIndex !== -1) {
+          state.users[userIndex] = updatedUser;
+        }
+      }) 
     
       .addCase(addUser.fulfilled, (state, action) => {
         state.users.push(action.payload);

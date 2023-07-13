@@ -1,39 +1,65 @@
+.tableAdduserSection {
+  overflow-x: auto;
+}
+
 table {
-     width: 100%;
-    margin: 0 auto;
-     border-bottom: 1px solid #f9f9f9;
-     border-collapse: collapse;
-     margin-bottom: 20px;
-     font-weight: 800;
-   }
-   
-   th {
-     background-color: #6C63AC;
-     padding: 10px;
-     text-align: center;
-     color: white;
-   }
-    
-   tr {
-     color: black;
-   
-     &:nth-child(even) {
-       background-color: #f9f9f9;
-       color: #6C63AC;
-   
-       .delete-button {
-         color: #6C63AC;
-       }
-     }
-   
-     td {
-       padding: 10px;
-   
-       .delete-button {
-        width: 40px;
-         color: black;
-         cursor: pointer;
-       }
-     }
-   }
-   
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-weight: 800;
+
+  th {
+    background-color: #6C63AC;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+
+  tr {
+    color: black;
+
+    &:nth-child(even) {
+      background-color: #f9f9f9;
+      color: #6C63AC;
+    }
+
+    td {
+      padding: 10px;
+width: 33%;
+      .editSave {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      .delete-button {
+        width: 32px;
+        color: black;
+        cursor: pointer;
+      }
+
+      input {
+        border: none;
+        background-color: white;
+        color: black;
+        font-weight: 800;
+        padding: 4px;
+        width: 80%;
+        font-size: large;
+        transition: border-bottom 0.3s ease;
+        text-align: center;     
+        border-bottom: 2px solid #6C63AC;
+
+        &:focus {
+          outline: none;
+          width: 80%;
+          font-size: large;
+          text-align: center;
+          border-bottom: 2px solid #6C63AC;
+        }
+      }
+    }
+  }
+}
