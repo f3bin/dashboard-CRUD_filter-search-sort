@@ -16,8 +16,6 @@ export const deleteUser = createAsyncThunk(
   }
 );
 
-
-
 export const updateUser = createAsyncThunk(
   "users/update",
   async (user) => {
@@ -29,10 +27,9 @@ export const updateUser = createAsyncThunk(
       body: JSON.stringify(user),
     });
 
-    return user;  
+    return user;
   }
 );
-
 
 export const addUser = createAsyncThunk("users/add", async (user) => {
   const response = await fetch("http://localhost:3031/users", {
@@ -79,12 +76,11 @@ const userSlice = createSlice({
         if (userIndex !== -1) {
           state.users[userIndex] = updatedUser;
         }
-      }) 
-    
+      })
+
       .addCase(addUser.fulfilled, (state, action) => {
         state.users.push(action.payload);
-      })
-  ;
+      });
   },
 });
 

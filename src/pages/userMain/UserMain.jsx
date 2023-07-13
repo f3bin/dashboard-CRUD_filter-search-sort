@@ -5,14 +5,15 @@ import AddUser from "../../components/addUser/AddUser";
 import UserTable from "../../components/userTable/UserTable";
 
 const UserMain = () => {
+
   return (
     <div className="userMain-container">
       <h2>Users</h2>
       <div className="header">
-      <SearchSort />
+      <SearchSort  />
       <AddUser />
       </div>
-      <UserTable />
+      <UserTable  />
     </div>
   );
 };

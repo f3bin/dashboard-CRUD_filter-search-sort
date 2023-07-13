@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
-import { FaTrash } from "react-icons/fa6";
+import React, { useEffect  } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUsers } from "../../redux/userSlice";
 import { useUserTable } from "../../hooks/useUserTable";
-import { MdModeEditOutline } from "react-icons/md";
-import { AiFillSave } from "react-icons/ai";
+import { FiEdit3 } from "react-icons/fi";
+import { AiOutlineSave, AiOutlineDelete } from "react-icons/ai";
 import "./UserTable.scss";
 
 const UserTable = () => {
@@ -25,6 +24,7 @@ const UserTable = () => {
   useEffect(() => {
     dispatch(getUsers());
   }, [dispatch]);
+
 
   return (
     <div className="tableAdduserSection">
@@ -66,21 +66,19 @@ const UserTable = () => {
                 </td>
                 <td>
                   {editingUserId === user.id ? (
-                    <AiFillSave
+                    <AiOutlineSave
                       className="editSave"
                       onClick={handleUpdateItem}
-                      size={26}
                     />
                   ) : (
-                    <MdModeEditOutline
+                    <FiEdit3
                       className="editSave"
-                      size={26}
                       onClick={() => handleEditItem(user)}
                     />
                   )}
-                  <FaTrash
+                  <AiOutlineDelete
                     className="delete-button"
-                    size={21}
+                    size={29}
                     onClick={() => handleDeleteItem(user.id)}
                   />
                 </td>
@@ -88,6 +86,7 @@ const UserTable = () => {
             ))}
         </tbody>
       </table>
+
     </div>
   );
 };

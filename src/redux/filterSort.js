@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-     searchedValue:"",
-     sortedValue:"",
+     searchedValue: "",
+     sortedValue: "",
 };
 
 const filterSortSlice = createSlice({
@@ -13,16 +13,16 @@ const filterSortSlice = createSlice({
                return {
                     ...state,
                     searchedValue: action.payload,
-                  };
+               };
           },
-          sortOption(state,action){
+          sortOption(state, action) {
                return {
                     ...state,
                     sortedValue: action.payload,
-                  };
+               };
           }
      }
 })
 
 export default filterSortSlice.reducer;
-export const { searchItem ,sortOption} = filterSortSlice.actions;
+export const { searchItem, sortOption } = filterSortSlice.actions;

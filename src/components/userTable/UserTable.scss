@@ -7,7 +7,8 @@ table {
   margin: 0 auto;
   border-collapse: collapse;
   margin-bottom: 20px;
-  font-weight: 800;
+  font-weight: 700;
+  border-bottom: 1px solid rgb(182, 182, 226);
 
   th {
     background-color: #6C63AC;
@@ -17,16 +18,21 @@ table {
   }
 
   tr {
-    color: black;
+    // color: white;
+    color:  #6C63AC;
+   
 
-    &:nth-child(even) {
-      background-color: #f9f9f9;
-      color: #6C63AC;
+    &:nth-child(even ) {
+      // background-color: #f9f9f9;
+      // color: #6C63AC;
+      background-color:  rgb(182, 182, 226);
+      color: #f9f9f9;
     }
 
     td {
       padding: 10px;
-width: 33%;
+      width: 33%;
+
       .editSave {
         width: 32px;
         height: 32px;
@@ -36,20 +42,19 @@ width: 33%;
 
       .delete-button {
         width: 32px;
-        color: black;
         cursor: pointer;
       }
 
       input {
         border: none;
-        background-color: white;
+        background-color: transparent;
         color: black;
-        font-weight: 800;
+        font-weight: 300;
         padding: 4px;
         width: 80%;
         font-size: large;
         transition: border-bottom 0.3s ease;
-        text-align: center;     
+        text-align: center;
         border-bottom: 2px solid #6C63AC;
 
         &:focus {
@@ -58,7 +63,8 @@ width: 33%;
           font-size: large;
           text-align: center;
           border-bottom: 2px solid #6C63AC;
-        }
+
+        } 
       }
     }
   }

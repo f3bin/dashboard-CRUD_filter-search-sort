@@ -12,7 +12,7 @@ export const useUserTable = () => {
      //for editing username and user dob
      const [editingUserId, setEditingUserId] = useState(null);
      const [editName, setEditName] = useState("");
-     const [editBirthDate, setEditBirthDate] = useState("");
+     const [editBirthDate, setEditBirthDate] = useState(" ");
 
 
      //Data will be filtered according to the searched value
@@ -20,7 +20,7 @@ export const useUserTable = () => {
           item.name.toLowerCase().includes(searchedValue.toLowerCase())
      );
 
-//creating a function named sort data with sorting date functonality
+     //creating a function named sort data with sorting date functonality
      const sortData = (data) => {
           const compareDates = (date1, date2) => new Date(date1) - new Date(date2);
 
@@ -40,7 +40,7 @@ export const useUserTable = () => {
           dispatch(deleteUser(id));
      };
 
-     //for editing username and dob and also for updation
+     //for editing username and dob for making it ready 
      const handleEditItem = (user) => {
           setEditingUserId(user.id);
           setEditName(user.name);
