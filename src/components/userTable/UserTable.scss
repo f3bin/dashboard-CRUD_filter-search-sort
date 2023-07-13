@@ -4,6 +4,7 @@
 
 table {
   width: 100%;
+  height: 400px;
   margin: 0 auto;
   border-collapse: collapse;
   margin-bottom: 20px;
@@ -20,6 +21,7 @@ table {
   tr {
     // color: white;
     color:  #6C63AC;
+    max-height: 40px;
    
 
     &:nth-child(even ) {
@@ -68,4 +70,29 @@ table {
       }
     }
   }
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: 1px solid gray;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.pagination-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-button.active {
+  background-color:#6C63AC;
+  color: white;
 }

@@ -23,13 +23,22 @@ export const useUserTable = () => {
      //creating a function named sort data with sorting date functonality
      const sortData = (data) => {
           const compareDates = (date1, date2) => new Date(date1) - new Date(date2);
+          const compareNames = (name1, name2) => name1.localeCompare(name2);
 
-          if (sortedValue === "asc") {
+          if (sortedValue === "ascdob") {
                return [...data].sort((a, b) => compareDates(a.birthDate, b.birthDate));
           }
-          if (sortedValue === "desc") {
+          if (sortedValue === "descdob") {
                return [...data].sort((a, b) => compareDates(b.birthDate, a.birthDate));
           }
+
+          if (sortedValue === "ascname") {
+               return [...data].sort((a, b) => compareNames(a.name, b.name));
+             }
+           
+             if (sortedValue === "descname") {
+               return [...data].sort((a, b) => compareNames(b.name, a.name));
+             }
           return data;
      };
 

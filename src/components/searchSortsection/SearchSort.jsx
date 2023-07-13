@@ -20,8 +20,10 @@ const SearchSort = () => {
           onChange={(e) => dispatch(sortOption(e.target.value))}
         >
           <option value="">Sort By</option>
-          <option value="asc">Ascending (DOB)</option>
-          <option value="desc">Descending (DOB)</option>
+          <option value="ascdob">Ascending (DOB)</option>
+          <option value="descdob">Descending (DOB)</option>
+          <option value="ascname">Ascending (NAME)</option>
+          <option value="descname">Descending (NAME)</option>
         </select>
       </div>
   
